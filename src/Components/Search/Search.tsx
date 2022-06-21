@@ -1,5 +1,6 @@
 import React,{useState,FC} from 'react';
-import './Search.scss'
+import { Button, Form, FormControl } from 'react-bootstrap';
+
 
 interface ISearchProps {
     setSearch:(str:string) => void
@@ -16,27 +17,26 @@ const Search:FC<ISearchProps> = (props) => {
         }
     };
     return (
-        <div className="form">
-            <input
-                        className='input'
-                        placeholder='search'
-                        type='search'
-                        value={str}
-                        onChange={(e) =>
-                            setSearch(e.target.value)}
-                        onKeyDown={handleKey}
-                    />
-            <button
-                         className='button'
-                         name='type'
-                         type='button'
-                         onClick={() =>
-                            setSearch(str)
-                        }
-                    >
-                        Search
-                    </button>
-         </div>
+        <div>
+            <Form className="d-flex">
+                <FormControl
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                    value={str}
+                    onChange={(e) =>
+                        setStr(e.target.value)}
+                    
+                />
+                <Button variant="outline-success"
+                onClick={() =>
+                    setSearch(str)
+                }
+                onKeyDown={handleKey}
+                >Search</Button>
+            </Form>
+        </div>
     );
 };
 

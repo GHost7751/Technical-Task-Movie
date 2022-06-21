@@ -4,6 +4,7 @@ import { fetchMovie } from '../../Service/FetchMovie';
 import { Spinner } from '../Spinner/Spinner';
 import MovieCard from './MovieCard';
 import { Pagination } from '@mui/material';
+import { Search } from '../Search/Search';
 
 const Movie:FC = () => {
     const [value,setValue] = useState<IMovieProps[]>([]);
@@ -26,6 +27,8 @@ const Movie:FC = () => {
 
     return (
         <div className='container content'>
+            <br />
+            <Search  setSearch={setSearch}/>
             <br />
             <div className='movies'>
                 
