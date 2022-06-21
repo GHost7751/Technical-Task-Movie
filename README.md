@@ -17,9 +17,7 @@ API
 URL: https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8
 Method: GET
 
-Parameter	Required	Type	Default value	Description
-s	yes	string		Title to search
-page	no	number	1	Page number
+
 
 Пример поиска “Batman” 2 страница
 https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=Batman&page=2
@@ -28,7 +26,6 @@ https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=Batman&page=2
 Требования
 
 Каждый значимый элемент должен быть отдельным компонентом
-Не использовать фреймворки для UI, верстаем руками
 Необходимо зафиксировать время затраченное на разработку
 Результат необходимо выгрузить в репозиторий (github, bitbucket, etc.)
 
